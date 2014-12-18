@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BeerMe</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="beer_icon">Beer</string>
+    <string name="wine_icon">Wine</string>
+    <string name="cocktail_icon">Cocktail</string>
+    <string name="shot_icon">Shot</string>
+    <string name="heineken_icon">Heineken</string>
+    <string name="tiger_icon">Tiger</string>
+    <string name="guinness_icon">Guinness</string>
+    <string name="magners_icon">Marngers</string>
+    <string name="irish_flag">Irish Flag</string>
+    <string name="black_russian">Black Russian</string>
+    <string name="orgasm">Orgasm</string>
+    <string name="four_horsemen">Four Horsemen</string>
+    <string name="old_fashioned">Old Fashioned</string>
+    <string name="martini">Martini</string>
+    <string name="daiquiri">Daiquiri</string>
+    <string name="mai_tai">Mai Tai</string>
+    <string name="shopping_cart">Shopping Cart</string>
+    <string name="submit_order">Submit Order</string>
+    <string name="cancel_order">Cancel Order</string>
+
+</resources>

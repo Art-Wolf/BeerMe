@@ -1,0 +1,154 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ie.johndoyle.beerme.MainActivity$PlaceholderFragment" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="160dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:id="@+id/linearScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/ligenfelderButton"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:adjustViewBounds="false"
+                android:background="@null"
+                android:contentDescription="@string/magners_icon"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_lingenfelder" />
+
+            <ImageButton
+                android:id="@+id/firstVineButton"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:adjustViewBounds="false"
+                android:background="@null"
+                android:contentDescription="@string/heineken_icon"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_first_vine" />
+
+            <ImageButton
+                android:id="@+id/franciscanEstateButton"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:adjustViewBounds="false"
+                android:background="@null"
+                android:contentDescription="@string/tiger_icon"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_franciscan_estates" />
+
+            <ImageButton
+                android:id="@+id/kenwoodButton"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:adjustViewBounds="false"
+                android:background="@null"
+                android:contentDescription="@string/guinness_icon"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_kenwood" />
+
+            <ImageButton
+                android:id="@+id/wolfBassButton"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:adjustViewBounds="false"
+                android:background="@null"
+                android:contentDescription="@string/magners_icon"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_wolf_bass" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/beerMenuButton"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/scrollView1"
+        android:layout_marginRight="18dp"
+        android:adjustViewBounds="false"
+        android:background="@null"
+        android:contentDescription="@string/beer_icon"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_beer" />
+
+    <ImageButton
+        android:id="@+id/wineMenuButton"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/beerMenuButton"
+        android:layout_marginRight="18dp"
+        android:adjustViewBounds="false"
+        android:background="@null"
+        android:contentDescription="@string/wine_icon"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_wine_on" />
+
+    <ImageButton
+        android:id="@+id/shotMenuButton"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/wineMenuButton"
+        android:layout_marginRight="18dp"
+        android:adjustViewBounds="false"
+        android:background="@null"
+        android:contentDescription="@string/shot_icon"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_shot" />
+
+    <ImageButton
+        android:id="@+id/cocktailMenuButton"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/shotMenuButton"
+        android:layout_marginRight="18dp"
+        android:adjustViewBounds="false"
+        android:background="@null"
+        android:contentDescription="@string/cocktail_icon"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_cocktail" />
+
+    <ImageButton
+        android:id="@+id/orderMenuButton"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/cocktailMenuButton"
+        android:layout_marginRight="18dp"
+        android:adjustViewBounds="false"
+        android:background="@null"
+        android:contentDescription="@string/shopping_cart"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_shopping_cart" />
+
+</RelativeLayout>

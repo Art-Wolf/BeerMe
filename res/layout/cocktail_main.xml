@@ -1,0 +1,179 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ie.johndoyle.beerme.MainActivity$PlaceholderFragment" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="160dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:id="@+id/linearScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/oldFashionedButton"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:adjustViewBounds="false"
+                android:background="@null"
+                android:contentDescription="@string/old_fashioned"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_old_fashioned" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/old_fashioned"
+                android:gravity="center"
+                android:text="@string/old_fashioned"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <ImageButton
+                android:id="@+id/martiniButton"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:adjustViewBounds="false"
+                android:background="@null"
+                android:contentDescription="@string/martini"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_martini" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/martini"
+                android:gravity="center"
+                android:text="@string/martini"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <ImageButton
+                android:id="@+id/daiquiriButton"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:adjustViewBounds="false"
+                android:background="@null"
+                android:contentDescription="@string/daiquiri"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_daiquiri" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/daiquiri"
+                android:gravity="center"
+                android:text="@string/daiquiri"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <ImageButton
+                android:id="@+id/maiTaiButton"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:adjustViewBounds="false"
+                android:background="@null"
+                android:contentDescription="@string/mai_tai"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_mai_tai" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/mai_tai"
+                android:gravity="center"
+                android:text="@string/mai_tai"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/beerMenuButton"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/scrollView1"
+        android:layout_marginRight="18dp"
+        android:adjustViewBounds="false"
+        android:background="@null"
+        android:contentDescription="@string/beer_icon"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_beer" />
+
+    <ImageButton
+        android:id="@+id/wineMenuButton"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/beerMenuButton"
+        android:layout_marginRight="18dp"
+        android:adjustViewBounds="false"
+        android:background="@null"
+        android:contentDescription="@string/wine_icon"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_wine" />
+
+    <ImageButton
+        android:id="@+id/shotMenuButton"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/wineMenuButton"
+        android:layout_marginRight="18dp"
+        android:adjustViewBounds="false"
+        android:background="@null"
+        android:contentDescription="@string/shot_icon"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_shot" />
+
+    <ImageButton
+        android:id="@+id/cocktailMenuButton"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/shotMenuButton"
+        android:layout_marginRight="18dp"
+        android:adjustViewBounds="false"
+        android:background="@null"
+        android:contentDescription="@string/cocktail_icon"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_cocktail_on" />
+
+    <ImageButton
+        android:id="@+id/orderMenuButton"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/cocktailMenuButton"
+        android:layout_marginRight="18dp"
+        android:adjustViewBounds="false"
+        android:background="@null"
+        android:contentDescription="@string/shopping_cart"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_shopping_cart" />
+
+</RelativeLayout>

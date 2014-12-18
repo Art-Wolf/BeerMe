@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ie.johndoyle.beerme.MainActivity$PlaceholderFragment" >
+
+    <ImageButton
+        android:id="@+id/beerButton"
+        android:layout_width="150dp"
+        android:layout_height="180dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/wineButton"
+        android:adjustViewBounds="false"
+        android:background="@null"
+        android:contentDescription="@string/beer_icon"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_beer" />
+
+    <ImageButton
+        android:id="@+id/wineButton"
+        android:layout_width="150dp"
+        android:layout_height="180dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/beerButton"
+        android:adjustViewBounds="false"
+        android:background="@null"
+        android:contentDescription="@string/wine_icon"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_wine" />
+
+    <ImageButton
+        android:id="@+id/shotButton"
+        android:layout_width="150dp"
+        android:layout_height="180dp"
+        android:layout_alignLeft="@+id/wineButton"
+        android:layout_below="@+id/wineButton"
+        android:adjustViewBounds="false"
+        android:background="@null"
+        android:contentDescription="@string/shot_icon"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_shot" />
+
+    <ImageButton
+        android:id="@+id/cocktailButton"
+        android:layout_width="150dp"
+        android:layout_height="180dp"
+        android:layout_alignLeft="@+id/beerButton"
+        android:layout_below="@+id/beerButton"
+        android:adjustViewBounds="false"
+        android:background="@null"
+        android:contentDescription="@string/cocktail_icon"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_cocktail" />
+
+    <ImageButton
+        android:id="@+id/orderButton"
+        android:layout_width="150dp"
+        android:layout_height="180dp"
+        android:layout_below="@+id/shotButton"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="false"
+        android:background="@null"
+        android:contentDescription="@string/shopping_cart"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_shopping_cart" />
+
+</RelativeLayout>
