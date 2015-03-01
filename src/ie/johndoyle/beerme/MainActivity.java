@@ -1,8 +1,19 @@
 package ie.johndoyle.beerme;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map.Entry;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONObject;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -11,7 +22,20 @@ import android.support.v7.internal.view.menu.ActionMenuView.LayoutParams;
 import android.text.SpannableString;
 import android.text.style.StyleSpan;
 import android.text.style.UnderlineSpan;
+import android.app.Activity;
+import android.app.PendingIntent;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Typeface;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.nfc.NdefMessage;
+import android.nfc.NdefRecord;
+import android.nfc.NfcAdapter;
+import android.nfc.Tag;
+import android.nfc.tech.Ndef;
+import android.nfc.tech.NdefFormatable;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -30,6 +54,8 @@ public class MainActivity extends FragmentActivity {
 
 	static HashMap<String, Item> orders = new HashMap<String, Item>();
 
+	static String orderId = "";
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -919,6 +945,7 @@ public class MainActivity extends FragmentActivity {
 			tbrow.addView(itemTotal);
 			table.addView(tbrow, new TableLayout.LayoutParams(
 					LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
+			
 			while (itemIterator.hasNext()) {
 				Entry<String, Item> entry = (Entry<String, Item>) itemIterator
 						.next();
@@ -959,6 +986,7 @@ public class MainActivity extends FragmentActivity {
 					.findViewById(R.id.beerMenuButton);
 			Button cancelButton = (Button) rootView
 					.findViewById(R.id.cancelButton);
+			Button submitButton = (Button) rootView.findViewById(R.id.submitButton);
 			
 			cocktailMenuButton.setOnClickListener(new OnClickListener() {
 				public void onClick(View v) {
@@ -1013,6 +1041,40 @@ public class MainActivity extends FragmentActivity {
 							"OrderFragment");
 					ft.commit();
 				}
+			});
+			
+			submitButton.setOnClickListener(new OnClickListener() {
+				public void onClick(View v) {
+					// WebServer Request URL
+	                MyAsyncTask task = new MyAsyncTask(null);
+	                
+	               
+	                
+	                task.setOrders(orders);
+	                String serverURL = "https://barserve.herokuapp.com/api/v1/order";
+	                task.setUrl(serverURL);
+	                task.execute();
+	                
+	                task.setOnResultsListener(new ResultsListener() {
+
+						@Override
+						public void onResultsSucceeded(String result) {
+							orderId = result;
+							Intent intent = new Intent(getActivity(), NFCActivity.class);
+							startActivity(intent);
+						}
+	                });
+	                
+	                //while (orderId == "") {}
+	                
+	                //final FragmentTransaction ft = getFragmentManager()
+					//		.beginTransaction();
+					//ft.replace(R.id.container, new TapFragment(),
+					//		"TapFragment");
+					//ft.commit();
+					
+				}
+				
 			});
 			
 			return rootView;
